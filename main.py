@@ -6,11 +6,12 @@ def sum_prime(n):
     for i in range(2, n):
         if num % i == 0:
             is_prime = False
-            break
     if is_prime:
-        print(f"This is the prime number")
         summation = ((n + 1) * n) // 2
-        print(f"Sum from 0 to {n} is {summation}")
+        return f"This is a prime number.\nSum from 0 to {n} is {summation}"
+    else:
+        return -1
 
 
-sum_prime(n=num)
+numbers_sum = sum_prime(num)
+print(numbers_sum)
